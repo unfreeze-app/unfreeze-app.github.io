@@ -18,14 +18,14 @@
 })();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Unfreeze — one tiny step to get unstuck</title>
-<meta name="description" content="Unfreeze helps you start the thing you've been avoiding. Type (or say) what you're stuck on and get one embarrassingly small physical step you can do in 30 seconds — plus a calming pre-start ritual with brown noise. Built for anyone who struggles to get started, including people with ADHD.">
-<meta property="og:title" content="Unfreeze — one tiny step to get unstuck">
-<meta property="og:description" content="Unfreeze helps you start the thing you've been avoiding. Type (or say) what you're stuck on and get one embarrassingly small physical step you can do in 30 seconds — plus a calming pre-start ritual with brown noise. Built for anyone who struggles to get started, including people with ADHD.">
+<title>Unfreeze — Screen Time Blocker</title>
+<meta name="description" content="Unfreeze blocks the apps and websites that eat your day — built from four quick questions into a schedule, with Gentle, Firm, and Deep Focus modes. Still stuck? Get one tiny AI step, free. Built for anyone who freezes at the start, including people with ADHD.">
+<meta property="og:title" content="Unfreeze — Screen Time Blocker">
+<meta property="og:description" content="Unfreeze blocks the apps and websites that eat your day — built from four quick questions into a schedule, with Gentle, Firm, and Deep Focus modes. Still stuck? Get one tiny AI step, free. Built for anyone who freezes at the start, including people with ADHD.">
 <meta property="og:image" content="https://unfreeze-app.tiiny.site/assets/icon.png">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://unfreeze-app.tiiny.site/">
-<link rel="canonical" href="https://unfreeze-app.tiiny.site/">
+<meta property="og:url" content="https://unfreeze-app.github.io/">
+<link rel="canonical" href="https://unfreeze-app.github.io/">
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -232,6 +232,12 @@
     border-bottom: 1px solid var(--ice-border);
     padding-bottom: 2px;
   }
+  .hero-trial {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ice);
+    margin: 0 0 6px;
+  }
   .trust-line {
     font-size: 13px;
     color: var(--faint);
@@ -320,6 +326,13 @@
     font-weight: 700;
     line-height: 1.4;
     color: var(--text);
+    margin-bottom: 8px;
+  }
+  .steps p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0;
   }
 
   /* ---------- Features ---------- */
@@ -401,13 +414,38 @@
     padding: 56px 32px;
     text-align: center;
   }
-  .pro-band h2 { margin-bottom: 14px; }
+  .pro-band h2 { margin-bottom: 22px; }
   .pro-band p {
     color: var(--muted);
     font-size: 16px;
     line-height: 1.6;
     max-width: 520px;
     margin: 0 auto 28px;
+  }
+  .pro-list {
+    list-style: none;
+    margin: 0 auto 24px;
+    padding: 0;
+    max-width: 380px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .pro-list li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text);
+  }
+  .pro-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--ice);
+    font-weight: 700;
   }
 
   /* ---------- Privacy ---------- */
@@ -579,9 +617,9 @@
   <section class="hero" id="top">
     <div class="hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">For brains that freeze</p>
-        <h1>What are you stuck on?</h1>
-        <p class="hero-sub">Type it — get one embarrassingly small step you can do in 30 seconds. Built for ADHD and anxious brains. No streaks, no guilt.</p>
+        <p class="eyebrow">Screen time, actually blocked</p>
+        <h1>Block the apps that eat your day.</h1>
+        <p class="hero-sub">Answer four quick questions and Unfreeze builds a blocking schedule around how you actually get pulled away — not a generic timer. Stuck anyway? Get one tiny step, free.</p>
         <div class="hero-actions">
           <a class="badge-appstore" href="https://apps.apple.com/app/id6761457941" aria-label="Download Unfreeze on the App Store">
             <svg viewBox="0 0 384 384" width="26" height="26" aria-hidden="true" focusable="false" fill="currentColor">
@@ -594,7 +632,8 @@
           </a>
           <a class="see-how" href="#how-it-works">See how it works ↓</a>
         </div>
-        <p class="trust-line">Free to start · No account · Works in any language</p>
+        <p class="hero-trial">Start with 2 weeks of Pro, free.</p>
+        <p class="trust-line">No account · No ads · Works in any language</p>
       </div>
 
       <div class="hero-visual">
@@ -643,15 +682,18 @@
       <ol class="steps">
         <li>
           <span class="step-num">1</span>
-          <h3>Type whatever you're stuck on</h3>
+          <h3>Answer four quick questions</h3>
+          <p>Unfreeze builds a blocking schedule around how you actually get pulled away — not a generic timer.</p>
         </li>
         <li>
           <span class="step-num">2</span>
-          <h3>Get one tiny step — never a whole plan</h3>
+          <h3>Blocks run themselves</h3>
+          <p>Turn it on, or start a manual block anytime — Gentle, Firm, or Deep Focus, however locked-in you need to be.</p>
         </li>
         <li>
           <span class="step-num">3</span>
-          <h3>The moment you're moving, chain straight into another.</h3>
+          <h3>Stuck anyway?</h3>
+          <p>Get one tiny step — free, up to five times a day. Never a whole plan.</p>
         </li>
       </ol>
     </div>
@@ -659,15 +701,30 @@
 
   <section class="section" id="features">
     <div class="container">
-      <h2 class="section-heading">Everything is built around one tiny step</h2>
+      <h2 class="section-heading">Block what pulls you away — and get moving when you're stuck</h2>
       <div class="features-grid">
-        <div class="feature-card tint-ice">
-          <h3>One tiny step</h3>
-          <p>Skip the plan. Type what you're stuck on and get a single, physical, doable-right-now step — never a list.</p>
+        <div class="feature-card tint-action">
+          <span class="pro-tag">Pro</span>
+          <h3>App &amp; website blocking</h3>
+          <p>Pick the apps — and the distracting sites — that pull you away, and shut them off on demand or on a schedule.</p>
+        </div>
+        <div class="feature-card tint-action">
+          <span class="pro-tag">Pro</span>
+          <h3>Recurring schedules</h3>
+          <p>Set it once. Up to three schedules block automatically for the times you already know you'll lose yourself.</p>
+        </div>
+        <div class="feature-card tint-action">
+          <span class="pro-tag">Pro</span>
+          <h3>Deep Focus + timed breaks</h3>
+          <p>Deep Focus holds the shield with no early exit. Gentle and Firm let you take a short, timed break instead — the block resumes on its own.</p>
         </div>
         <div class="feature-card tint-ice">
-          <h3>Two kinds of stuck</h3>
-          <p>Frozen before you start, or can't put something down? Switch between Can't start and Can't stop and get a step built for that exact stuck.</p>
+          <h3>One tiny step, free</h3>
+          <p>Type or say what you're stuck on and get a single, physical, doable-right-now step — never a plan. Free, up to five times a day.</p>
+        </div>
+        <div class="feature-card tint-ice">
+          <h3>Can't stop mode</h3>
+          <p>Doomscrolling or hyperfocused instead of frozen? Switch modes and get one tiny step to put it down.</p>
         </div>
         <div class="feature-card tint-ice">
           <div class="feature-mascot">
@@ -677,20 +734,11 @@
             </picture>
           </div>
           <h3>Sit with me</h3>
-          <p>Not ready to move yet? A small companion sits with you in a living scene, brown noise playing, until you are.</p>
-        </div>
-        <div class="feature-card tint-ice">
-          <h3>The ritual + brown noise</h3>
-          <p>A short settling-in ritual and a looping brown-noise track ease you into a session before anything is asked of you.</p>
+          <p>Not ready to move yet? A small companion sits with you in a living scene, brown noise playing — free, always open, no daily limit.</p>
         </div>
         <div class="feature-card tint-action">
           <h3>Watch the bar, not the clock</h3>
-          <p>A quiet follow-through timer — on screen and on your Lock Screen — keeps the step in view without turning it into a deadline.</p>
-        </div>
-        <div class="feature-card tint-action">
-          <span class="pro-tag">Pro</span>
-          <h3>Block the apps that eat you</h3>
-          <p>Block the apps that swallow your time, on a schedule or on demand — including a Deep Focus mode with no early exit.</p>
+          <p>A quiet follow-through timer — on screen and on your Lock Screen as a Live Activity — keeps the step in view without turning it into a deadline.</p>
         </div>
       </div>
     </div>
@@ -700,12 +748,12 @@
     <div class="container">
       <div class="stats-strip">
         <div class="stat">
-          <span class="stat-num">30 sec</span>
-          <span class="stat-label">your first step</span>
+          <span class="stat-num">15m–1d</span>
+          <span class="stat-label">block lengths, your call</span>
         </div>
         <div class="stat">
-          <span class="stat-num">1</span>
-          <span class="stat-label">step at a time, never a plan</span>
+          <span class="stat-num">3</span>
+          <span class="stat-label">firmness levels — Gentle, Firm, Deep Focus</span>
         </div>
         <div class="stat">
           <span class="stat-num">0</span>
@@ -719,7 +767,14 @@
     <div class="container">
       <div class="pro-band">
         <h2>Unfreeze Pro</h2>
-        <p>Unlimited sessions · Task breakdown · App blocking · Deep Focus</p>
+        <ul class="pro-list">
+          <li>Block the apps that pull you away</li>
+          <li>Deep Focus — no breaks until the timer ends</li>
+          <li>Recurring schedules that block for you</li>
+          <li>The whole task, still one step at a time</li>
+          <li>Unlimited daily sessions</li>
+        </ul>
+        <p>Monthly, annual, and lifetime — pick your plan at checkout. Prices are shown in the App Store.</p>
         <a class="badge-appstore" href="https://apps.apple.com/app/id6761457941" aria-label="Download Unfreeze on the App Store">
           <svg viewBox="0 0 384 384" width="26" height="26" aria-hidden="true" focusable="false" fill="currentColor">
             <path d="M318.7 268.7c-5.1 15.6-11.7 30.9-19.9 45.6-11.6 20.7-24.8 41.8-43.4 41.8-18.9 0-24.5-11.5-45.7-11.5-21.1 0-27.3 11.2-45.5 11.9-18.3.7-32.3-22.4-44.1-42.9-25.6-44.3-45.2-125.2-18.9-179.7 13.1-27 36.4-44.1 61.8-44.5 18.5-.3 35.9 12.5 47.2 12.5 11.3 0 32.4-15.4 54.6-13.1 9.3.4 35.4 3.8 52.2 28.4-1.4.9-31.2 18.2-30.9 54.3.4 43 37.8 57.3 38.2 57.5-.3 1-6 20.5-19.6 40.7zM254.7 45.6c9.9-12 16.5-28.6 14.7-45.6-14.2.6-31.4 9.5-41.6 21.5-9.2 10.6-17.2 27.6-15 43.7 15.7 1.2 31.9-8 41.9-19.6z"/>
@@ -740,7 +795,7 @@
         <p class="privacy-intro">Unfreeze is built with your privacy in mind. Here's what we collect and why.</p>
 
         <h3>What we collect</h3>
-        <p>Unfreeze stores your ritual steps and session data locally on your device using AsyncStorage. This data never leaves your device.</p>
+        <p>Unfreeze stores your ritual steps and session data locally on your device using AsyncStorage. This data never leaves your device. Which apps and websites you choose to block is handled entirely by Apple's on-device Screen Time (Family Controls) frameworks and never leaves your device either.</p>
 
         <h3>Claude API</h3>
         <p>When you submit a task, the text you typed — or dictated — is relayed through our Cloudflare Worker to Anthropic's Claude API to generate your micro-step and comes straight back to your phone; we keep no copy of it, only a daily count of how many steps were generated. Anthropic's privacy policy applies to this data.</p>
@@ -757,7 +812,7 @@
         <h3>No account required</h3>
         <p>Unfreeze works entirely without an account.</p>
 
-        <p class="privacy-contact">If you have any questions, contact us at <a href="mailto:unfreezetheapp@gmail.com">unfreezetheapp@gmail.com</a> — last updated August 2026.</p>
+        <p class="privacy-contact">If you have any questions, contact us at <a href="mailto:unfreezetheapp@gmail.com">unfreezetheapp@gmail.com</a> — last updated September 2026.</p>
       </div>
     </div>
   </section>
