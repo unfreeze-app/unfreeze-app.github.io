@@ -801,7 +801,7 @@
         <p>When you submit a task, the text you typed — or dictated — is relayed through our Cloudflare Worker to Anthropic's Claude API to generate your micro-step and comes straight back to your phone; we keep no copy of it, only a daily count of how many steps were generated. Anthropic's privacy policy applies to this data.</p>
 
         <h3>Voice input</h3>
-        <p>If you dictate instead of typing, Apple's built-in speech recognition turns what you say into text, under Apple's privacy policy. We never receive the audio — only the text you then send as your task.</p>
+        <p>If you dictate instead of typing, Apple's built-in speech recognition turns what you say into text first, under Apple's privacy policy. The same short clip is then sent once to our Cloudflare Worker, which passes it to Cloudflare's hosted speech model (Whisper) for a cleaner transcript. The audio is processed in memory and discarded immediately: we keep no recordings, and the clip is never linked to your name or email. Cloudflare's privacy policy applies to that processing. If the second pass fails, the app simply keeps Apple's transcript.</p>
 
         <h3>RevenueCat</h3>
         <p>If you subscribe to Unfreeze Pro, your purchase is processed through Apple and managed by RevenueCat. RevenueCat may collect anonymous purchase data for subscription management.</p>
